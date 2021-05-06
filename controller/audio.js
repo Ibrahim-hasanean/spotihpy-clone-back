@@ -11,7 +11,7 @@ module.exports = {
       releasedDate,
       audioWords,
     } = req.body;
-    // console.log(req.files);
+    console.log(req.files);
     // console.log(req.files.image);
     let imageURL = await uploadToFireBase(req.files.image[0]);
     let audioURL = await uploadToFireBase(req.files.audio[0]);
