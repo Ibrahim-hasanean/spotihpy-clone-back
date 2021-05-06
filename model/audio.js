@@ -35,7 +35,7 @@ const audioSchema = new Schema({
     required: true,
   },
   releasedDate: {
-    type: Date,
+    type: String,
     required: true,
   },
 });
