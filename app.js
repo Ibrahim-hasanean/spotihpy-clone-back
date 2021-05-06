@@ -5,7 +5,7 @@ var logger = require("morgan");
 const auidoRouter = require("./routes/audio");
 var app = express();
 require("./config/mongoose");
-require("./config/firebaseAdmin");
+// require("./config/firebaseAdmin");
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
