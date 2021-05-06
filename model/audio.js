@@ -4,11 +4,9 @@ const Schema = mongoose.Schema;
 const audioSchema = new Schema({
   imageURL: {
     type: String,
-    required: true,
   },
   audioURL: {
     type: String,
-    required: true,
   },
   name: {
     type: String,

@@ -13,9 +13,10 @@ module.exports = {
     } = req.body;
     console.log(req.files);
     // console.log(req.files.image);
-    let imageURL = await uploadToFireBase(req.files.image[0]);
-    let audioURL = await uploadToFireBase(req.files.audio[0]);
     try {
+      let imageURL = await uploadToFireBase(req.files?.image[0]);
+      let audioURL = await uploadToFireBase(req.files?.audio[0]);
+
       let newAudio = await Audio.create({
         imageURL,
         audioURL,
