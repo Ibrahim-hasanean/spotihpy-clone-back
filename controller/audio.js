@@ -27,7 +27,7 @@ module.exports = {
         releasedDate,
         audioWords,
       });
-      let audoes = await Audio.find({});
+      let audoes = await Audio.find({}).sort({ createdAt: -1 });
 
       res.status(201).json({ message: "audio added", audoes });
     } catch (err) {
