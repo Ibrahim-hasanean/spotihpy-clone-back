@@ -3,10 +3,12 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const auidoRouter = require("./routes/audio");
-const Port = process.env.PORT;
+const cors = require("cors");
+const Port = process.env.PORT || 3000;
 var app = express();
 require("./config/mongoose");
 // require("./config/firebaseAdmin");
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,5 +24,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(Port, () => {
-  console.log("listen on 3000");
+  console.log(`listen on ${Port}`);
 });

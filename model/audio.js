@@ -30,10 +30,7 @@ const audioSchema = new Schema({
     type: String,
     required: true,
   },
-  songName: {
-    type: String,
-    required: true,
-  },
+
   releasedDate: {
     type: String,
     required: true,

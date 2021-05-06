@@ -23,7 +23,6 @@ module.exports = {
         audioTime,
         artistName,
         category,
-        songName,
         releasedDate,
         audioWords,
       });
