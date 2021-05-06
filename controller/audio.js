@@ -36,7 +36,7 @@ module.exports = {
     }
   },
   getAdudio: async (req, res) => {
-    let audio = await Audio.find({});
+    let audio = await Audio.find({}).sort({ createdAt: -1 });
     return res.status(200).json({ audio });
   },
 };
